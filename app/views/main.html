@@ -1,0 +1,136 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-7 col-md-8 app-ad-block"><img src="../images/Login & Sign Up.png" width="100%">
+        </div>
+        <div class="col-sm-5 col-md-4 login-signup-form">
+            <div class="negative-margins">
+                <!--login form-->
+                <form ng-submit="submit()" name="register" class="login-area" ng-controller = "RegisterCtrl"  novalidate>
+                    <div class="field50-wrap">
+                        <div class="field50-left">
+                            <input name="email" ng-model="email" type="email" class="form-control" placeholder="email">
+                            <span class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Please enter a proper email.</span>
+                        </div>
+                        <div class="field50-right">
+                            <input name="password" ng-model="password" type="password" class="form-control" placeholder="Password" required />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="forgot-password">forgot password?</div>
+                    <button ng-disabled="register.$invalid" type="submit" class="btn btn-signin">Sign In</button>
+                </form>
+                <!--login form end-->
+
+                <!--sign up form-->
+                <form ng-submit="submit()" name="register" ng-controller = "RegisterCtrl" class="signup-area">
+                    <div class="signup-header">Sign Up</div>
+                    <div class="field50-wrap">
+                        <div class="field50-left">
+                            <input type="firstname" class="form-control" placeholder="First name">
+                        </div>
+                        <div class="field50-right">
+                            <input type="lastname" class="form-control" placeholder="Last Name">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="field-row">
+                          <input name="email" ng-model="email" type="email" class="form-control" placeholder="email">
+                            <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Please enter a proper email.</p>
+                    </div>
+                    <div class="field-row">
+                        <input type="mobile_number" class="form-control" placeholder="Mobile Number">
+                    </div>
+                    <div class="field-row">
+                        <input name="password" ng-model="password" type="password" class="form-control" placeholder="Password" required />
+                    </div>
+                    <div class="field-row">
+                        <input name="password_confirm" ng-model="password_confirmation" type="password" class="form-control" placeholder="Confirm Password" validate-equals='password'/>
+                        <p class="help-block" ng-show="register.password_confirm.$dirty && register.password_confirm.$invalid">please match the passwords.</p>
+                    </div>
+                    <div class="form-label">Date of Birth</div>
+                    <div class="field-row">
+                        <div class="field33-left">
+                            <select name="month" class="form-control" placeholder="Confirm Password">
+                                <option value="Month">Month</option>
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="May">May</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+                        </div>
+                        <div class="field33-mid">
+                            <select name="month" class="form-control" placeholder="Confirm Password">
+                                <option value="Day" selected="SELECTED">Day</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </div>
+                        <div class="field33-right">
+                            <select name="month" class="form-control" placeholder="Confirm Password">
+                                <option value="Year" selected="selected">Year</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="field-row" style="color:#999; font-weight:normal;">
+                        <div style="display:inline-block; margin-right:15px;">
+                            <input type="radio" checked="checked" id="male" name="gender" value="1" /> Male
+                        </div>
+                        <div style="display:inline-block;">
+                            <input type="radio" id="female" name="gender" value="2" /> Female
+                        </div>
+                    </div>
+                    <div class="t-c">By clicking Sign Up, you agree to our Terms and that you have read our Data Policy, including our Cookie Use.</div>
+                    <button ng-disabled="register.$invalid" type="submit" class="btn btn-signup">Sign Up</button>
+                </form>
+                <!--Sign Up form end -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="container"> <p> Built with <span class="glyphicon glyphicon-heart"></span> at Yookos</p></div>
+</div>
+
