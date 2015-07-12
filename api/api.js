@@ -43,14 +43,13 @@ router.get('/', function (req, res) {
 // on routes that end in /profiles
 // ----------------------------------------------------
 router.route('/profiles')
-
   // create a profile (accessed at POST http://localhost:3000/api/profiles)
   .post(function (req, res) {
     var profile = new Profile();      // create a new instance of the Profile model
     profile.name = req.body.name;  // set the profiles name (comes from the request)
     profile.userid = req.body.userid;
     profile.username = req.body.username;
-    profile.alternate_email = req.body.alternate_email;
+    profile.alternate_emails = req.body.alternate_emails;
     profile.biography= req.body.biography;
     profile.cellphone = req.body.cellphone;
     profile.currentcity = req.body.currentcity;
@@ -62,13 +61,27 @@ router.route('/profiles')
     profile.hometown = req.body.hometown;
     profile.imageurl = req.body.imageurl;
     profile.interests = req.body.interests;
+    profile.work = req.body.work;
+    profile.education = req.body.education;
+    profile.car = req.body.car;
 
     // save the profile and check for errors
     profile.save(function (err) {
-      if (err)
-        res.send(err);
+      if (!err){
+        console.log("Created");
 
-      res.json({message: 'Profile created!'});
+      }else{
+        return console.log(err);
+
+      }
+      return res.send(profile);
+      //
+      //res.json(profile);
+
+      //
+      //res.status(200).send({
+      //  profile: Profile.toJSON()
+      //});
     });
 
   })
